@@ -1,0 +1,107 @@
+:root {
+    --bg-primary: #0F0F0F;
+    --bg-secondary: #555555;
+
+    --fg-primary: #FFFFFF;
+    --fg-secondary: #AAAAAA;
+
+
+    --red-primary: #FF0101;
+    --red-secondary: #7F0002;
+    --yellow-primary: #FF8601;
+    --yellow-secondary: #7F4201;
+    --cyan-primary: #00FFCD;
+    --cyan-secondary: #01816C;
+
+    --transitions: 80ms;
+}
+
+body {
+    all: unset;
+    background-color: var(--bg-primary);
+    color: var(--fg-primary);
+    font-family: 'Roboto', sans-serif;
+    font-size: 10px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    height: 60vh;
+}
+
+.preview {
+    display: flex;
+    flex-direction: column;
+}
+
+.preview .thumbnail {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 180px;
+    width: 320px;
+    border-radius: 12px;
+    background-color: var(--bg-secondary);
+    transition-duration: var(--transitions);
+}
+
+.preview .thumbnail.drag-over {
+    background-color: var(--cyan-secondary);
+    transition-duration: var(--transitions);
+}
+
+#dropped-image {
+    border-radius: 12px;
+    height: 180px;
+    width: 320px;
+    object-fit: contain;
+}
+
+#upload-button {
+    color: var(--fg-primary);
+    font-size: 16px;
+    cursor: pointer;
+    user-select: none;
+    padding: 6px 12px;
+    border-radius: 99px;
+    outline: #ffffff42 solid 2px;
+    transition-duration: var(--transitions);
+}
+
+#upload-button:hover {
+    transition-duration: var(--transitions);
+    background-color: var(--hover);
+    background-color: #6868683f;
+}
+
+.preview .description {
+    display: flex;
+    flex-direction: row;
+}
+
+.preview .description .title h3 {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 500;
+    overflow: hidden;
+    max-height: 4rem;
+    text-overflow: ellipsis;
+    color: var(--fg-primary);
+    margin: 12px 0 6px 0;
+}
+
+.preview .description .title span {
+    font-size: 12px;
+    line-height: 18px;
+    color: var(--fg-secondary);
+}
+
+.preview .description img {
+    border-radius: 99px;
+    height: 36px;
+    width: 36px;
+    margin-top: 12px;
+    margin-right: 12px;
+}

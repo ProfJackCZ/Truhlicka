@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Youtube náhledy</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JL45PK16P8"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-JL45PK16P8');
+    </script>
+
+</head>
+
+<body id="main">
+
+    <input type="file" id="fake-input" style="display: none;">
+
+
+    <section class="preview">
+
+        <div class="thumbnail" id="drop-area">
+            <span id="upload-button">Nahraj nebo přetáhni obrázek sem</span>
+            <img id="dropped-image" style="display: none;">
+        </div>
+
+        <div class="description">
+            <picture>
+                <source srcset="profile.avif">
+                <img src="profile.jpg">
+            </picture>
+
+            <div class="title">
+                <h3>Jak dělat parádní youtube náhledovky?</h3>
+                <span>
+                    Grizlik :D <br />
+                    1,2 tis. zhlédnutí • před 12 minutami
+                </span>
+            </div>
+        </div>
+
+    </section>
+
+</body>
+
+</html>
