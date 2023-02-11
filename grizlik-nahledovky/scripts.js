@@ -45,12 +45,20 @@ dropArea.addEventListener("drop", (event) => {
 
 function setImage(image) {
     const img = document.getElementById("dropped-image");
-    const dsc = document.getElementById("upload-button");
+    const button = document.getElementById("upload-button");
 
     if (image) {
-        dsc.style.display = "none";
+        button.classList.add("hidden-except-hover");
         img.src = event.target.result;
         img.style.display = "block";
         return;
     }
 }
+
+
+
+/* URL ODKAZ */
+
+// const searchParams = new URLSearchParams(window.location.search);
+// const uParam = searchParams.get("u");
+// console.log(uParam);

@@ -37,6 +37,7 @@ body {
 }
 
 .preview .thumbnail {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -60,6 +61,7 @@ body {
 }
 
 #upload-button {
+    position: absolute;
     color: var(--fg-primary);
     font-size: 16px;
     cursor: pointer;
@@ -68,12 +70,12 @@ body {
     border-radius: 99px;
     outline: #ffffff42 solid 2px;
     transition-duration: var(--transitions);
+    background-color: #6868683f;
 }
 
 #upload-button:hover {
     transition-duration: var(--transitions);
-    background-color: var(--hover);
-    background-color: #6868683f;
+    background-color: #2727279d;
 }
 
 .preview .description {
@@ -104,4 +106,9 @@ body {
     width: 36px;
     margin-top: 12px;
     margin-right: 12px;
+}
+
+.hidden-except-hover:not(:hover) {
+    transition-duration: var(--transitions);
+    opacity: 0;
 }
